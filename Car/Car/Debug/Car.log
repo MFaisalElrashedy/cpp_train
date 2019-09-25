@@ -1,0 +1,10 @@
+﻿  stdafx.cpp
+  VehicleOwner.cpp
+  Vehicle.cpp
+  Motorbike.cpp
+  main.cpp
+  Inspector.cpp
+  Car.cpp
+  Generating Code...
+  Car.vcxproj -> c:\users\itadmin\documents\visual studio 2015\Projects\Car\Debug\Car.exe
+  Car.vcxproj -> c:\users\itadmin\documents\visual studio 2015\Projects\Car\Debug\Car.pdb (Full PDB)
