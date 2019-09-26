@@ -1,15 +1,26 @@
 #include "Car.h"
 #include <iostream>
+#
 
 int Car::Totalcars = 0;
 
-Car::Car() {
-	Totalcars++;
+Car::Car():Car(0){
+  std::cout << "Car()" << std::endl;
 }
-Car::Car(float amount) {
-	fuel = amount;
+Car::Car(float amount):Car(amount,0) {
+  std::cout << "Car(float)" << std::endl;
 
 }
+Car::Car(float amount, int pass)
+{
+  std::cout << "Car(float , int)" << std::endl;
+
+  Totalcars++;
+  fuel = amount;
+  speed = 0;
+  passengers = pass;
+} 
+
 void Car::FillFuel(float amount) {
 	fuel = amount;
 }
@@ -45,6 +56,7 @@ void Car::Dashboard() const {
 
 
 Car::~Car() {
+  std::cout << "destructor Car()" << std::endl;
 
 	Totalcars--;
 }
