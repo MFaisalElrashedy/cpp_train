@@ -12,20 +12,17 @@ public:
 	//Move constructor
 	Integer(Integer &&obj);
 	int GetValue()const;
-	void SetValue(int value);
-	~Integer();
-	Integer & operator ++();
-	Integer operator ++(int);
-	bool operator ==(const Integer &a)const;
+        void SetValue(int value);
+       // Integer operator+(const Integer &a) const;
+        Integer & operator++();
+        Integer operator++(int);
+        bool operator ==(const Integer &obj)const;
+        Integer & operator =(const Integer &obj) ;
+        Integer & operator =(Integer &&obj);
+      //   void opertaor ()(); not working why?
+    //    friend std::istream operator >> (std::istream &in, Integer &a); 
+        
 
-	//Copy assignment
-	Integer & operator =(const Integer &a);
-	//Move assignment
-	Integer & operator =(Integer &&a);
-	Integer operator +(const Integer & a)const;
-
-	void operator ()();
+        ~Integer();
+	
 };
-Integer operator +(int x, const Integer &y);
-std::ostream & operator <<(std::ostream & out, const Integer &a);
-std::istream & operator >> (std::istream &input, Integer &a);
